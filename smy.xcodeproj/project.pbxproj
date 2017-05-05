@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ECB190931EAF2AEB00FA323E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECEB87831E8C9BAF00EAD0D0 /* Info.plist */; };
+		EC74ABFC1EB2DA62006C4EAB /* 1.3.release.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC74ABFB1EB2DA62006C4EAB /* 1.3.release.strings */; };
+		EC74ABFE1EB2DACE006C4EAB /* 1.4.release.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC74ABFD1EB2DACE006C4EAB /* 1.4.release.strings */; };
 		ECC3E92A1E9F56B800002750 /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC3E9291E9F56B800002750 /* AlicloudUtils.framework */; };
 		ECC3E92D1E9F56C600002750 /* CloudPushSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC3E92B1E9F56C500002750 /* CloudPushSDK.framework */; };
 		ECC3E92E1E9F56C600002750 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC3E92C1E9F56C600002750 /* UTDID.framework */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC74ABFB1EB2DA62006C4EAB /* 1.3.release.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = 1.3.release.strings; sourceTree = "<group>"; };
+		EC74ABFD1EB2DACE006C4EAB /* 1.4.release.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = 1.4.release.strings; sourceTree = "<group>"; };
 		ECB190921EADBFEC00FA323E /* smy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = smy.entitlements; sourceTree = "<group>"; };
 		ECB190951EB03F0B00FA323E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		ECC3E9291E9F56B800002750 /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudUtils.framework; sourceTree = "<group>"; };
@@ -115,6 +118,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC74ABF91EB2D9BB006C4EAB /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				EC74ABFA1EB2D9CE006C4EAB /* upgrade */,
+			);
+			name = docs;
+			sourceTree = "<group>";
+		};
+		EC74ABFA1EB2D9CE006C4EAB /* upgrade */ = {
+			isa = PBXGroup;
+			children = (
+				EC74ABFB1EB2DA62006C4EAB /* 1.3.release.strings */,
+				EC74ABFD1EB2DACE006C4EAB /* 1.4.release.strings */,
+			);
+			name = upgrade;
+			sourceTree = "<group>";
+		};
 		ECCB5D551EAC9ADA00EEEDB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +179,7 @@
 		ECEB87761E8C9BAF00EAD0D0 /* smy */ = {
 			isa = PBXGroup;
 			children = (
+				EC74ABF91EB2D9BB006C4EAB /* docs */,
 				ECB190921EADBFEC00FA323E /* smy.entitlements */,
 				ECEB87771E8C9BAF00EAD0D0 /* AppDelegate.swift */,
 				ECEB87791E8C9BAF00EAD0D0 /* ViewController.swift */,
@@ -309,10 +330,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB190931EAF2AEB00FA323E /* Info.plist in Resources */,
 				ECEB87821E8C9BAF00EAD0D0 /* LaunchScreen.storyboard in Resources */,
 				ECEB877F1E8C9BAF00EAD0D0 /* Assets.xcassets in Resources */,
+				EC74ABFC1EB2DA62006C4EAB /* 1.3.release.strings in Resources */,
 				ECEB877D1E8C9BAF00EAD0D0 /* Main.storyboard in Resources */,
+				EC74ABFE1EB2DACE006C4EAB /* 1.4.release.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = smy/smy.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yanjie wang (6T52J3FDGU)";
@@ -505,7 +528,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = smy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
@@ -524,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = smy/smy.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Anxinlirong Technology Co.,Ltd. (BK6XQ4L7U3)";
@@ -533,7 +557,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = smy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axlr.smy;

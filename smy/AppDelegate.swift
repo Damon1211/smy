@@ -81,7 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if (res!.success) {
                 print("Push SDK init success, deviceId: \(CloudPushSDK.getDeviceId()!)")
             } else {
-                print("Push SDK init failed, error: \(res!.error!).")
+                //print("Push SDK init failed, error: \(res!.error!).")
+                print("Push SDK init failed")
             }
         }
     }
@@ -125,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let badge = aps["badge"] ?? 0
         let sound = aps["sound"] ?? "none"
         let extras = userInfo["Extras"]
-        print("Notification, alert: \(alert), badge: \(badge), sound: \(sound), extras: \(extras).")
+        print("Notification, alert: \(alert), badge: \(badge), sound: \(sound), extras: \(String(describing: extras)).")
     }
     
     // 处理iOS 10通知(iOS 10+)
@@ -147,7 +148,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let extras = userInfo["Extras"]
         // 通知打开回执上报
         CloudPushSDK.sendNotificationAck(userInfo)
-        print("Notification, date: \(noticeDate), title: \(title), subtitle: \(subtitle), body: \(body), badge: \(badge), extras: \(extras).")
+        print("Notification, date: \(noticeDate), title: \(title), subtitle: \(subtitle), body: \(body), badge: \(badge), extras: \(String(describing: extras)).")
     }
     
     // App处于前台时收到通知(iOS 10+)
@@ -195,7 +196,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if (res!.success) {
                 print("Upload deviceToken to Push Server, deviceToken: \(CloudPushSDK.getApnsDeviceToken()!)")
             } else {
-                print("Upload deviceToken to Push Server failed, error: \(res?.error)")
+                print("Upload deviceToken to Push Server failed, error: \(String(describing: res?.error))")
             }
         }
     }
