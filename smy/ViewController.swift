@@ -19,9 +19,23 @@ class ViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
         //loadUrlByFunc2();
 
         //loadUrlByFunc3();
+    
+        //loadUrlByFunc4();
         
+        loadUrlByFunc5();
+    }
+    
+    func loadUrlByFunc5(){
+        let deviceId:String
         
-        loadUrlByFunc4();
+        if let tDeviceId = CloudPushSDK.getDeviceId() {
+            deviceId = tDeviceId
+        }else{
+            deviceId = ""
+        }
+        
+        open_url = "https://res.anxinlirong.com/proxy/index.html?deviceId=\(String(describing: deviceId))"
+        loadWebUrl4()
     }
     
     private var webView = WKWebView()
